@@ -34,3 +34,18 @@ class ViewShortlistController:
         # Display the buyer's shortlist of cars
         return self.buyer_entity.get_shortlist(buyer_id)
 
+class SearchShortlistController:
+    def __init__(self):
+        # Initialize the entities
+        self.buyer_entity = Buyer()
+    def search_shortlist(self, buyer_id,search_term):
+        # Search for cars in the buyer's shortlist
+        return self.buyer_entity.search_shortlist(buyer_id,search_term)
+    
+class LoanCalculatorController:
+    def __init__(self):
+        # Initialize the entities
+        self.buyer_entity = Buyer()
+    def loan_calculator(self,car_id):
+        return self.buyer_entity.loan_calculator(car_id)
+
